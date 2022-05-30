@@ -1,0 +1,418 @@
+@font-face {
+    font-family: "Lobster";
+    src: url("../Fonts/Lobster.otf");
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* 1. Stylization of header */
+
+.header {
+    background: linear-gradient(180def #e1e1e1,#ffffff);
+    min-width: 80%;
+    display: flex;
+    justify-content: space-around;
+}
+
+/* 1.1. Stylization of the header logo */
+
+.logo {
+    margin-bottom: 28px;
+}
+
+.logo a {
+    text-decoration: none;
+}
+
+.logo h2 {
+    margin-top: 40px;
+    font-size: 49px;
+    color: #676666;
+    font-family: "Lobster";
+    
+}
+
+.logo h2 span {
+    color: #ff7700;
+}
+
+/* 1.2. Stylization of the header navigation */
+
+.nav {
+    display: flex;
+}
+
+.nav_link {
+    width: 100px;
+    display: block;
+    padding-top: 44px;
+    padding-left: 22px;
+    padding-right: 22px;
+    list-style-type: none;
+    border-right: 1px solid #d9d9d9;
+    padding-bottom: 29px;
+    transition: 1s all;
+}
+
+.nav_link:hover
+{
+    background: linear-gradient(360deg, #cbc2c2, #ffffff);
+}
+
+.nav_link:last-child {
+    border-right: none;
+}
+
+.nav_link {
+    font-size: 16px;
+    text-decoration: none;
+    color: #545454;
+}
+
+.header__line
+{
+    color: #cccccc;
+    background-color: #cccccc;
+}
+
+/* 2. Stylization Content block */
+
+.Content
+{
+    margin: auto;
+    display: block;
+    justify-content: center;
+    max-width: 1024px;
+}
+
+.Content__title
+{
+    margin-left: 10px;
+    margin-top: 42px;
+    color: #565555;
+    margin-bottom: 32px;
+}
+
+.Input__File {
+    outline: none;
+    font-size: 24px;
+    margin-left: 10px;
+    height: 46px;
+    width: 450px;
+    border-radius: 7px;
+    border: 1px solid #cacaca;
+}
+
+.Import__File
+{
+    font-size: 24px;
+    margin-left: 16px;
+    height: 46px;
+    width: 209px;
+    border-radius: 7px;
+    color: #fff;
+    background-color: #ff9700;
+    border: none;
+}
+
+
+/* 2.1. Stylization cards */
+
+.cards {
+    margin-top: 75px;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(4, 220px);
+    grid-column-gap: 38px;
+}
+
+.card 
+{
+    width: 220px;
+    height: 285px;
+    background-color: #ffffff;
+    border: 1px solid #d6d6d6;
+    margin-bottom: 30px;
+}
+
+.sub_card
+{
+    margin-top: 200px;
+    display: flex;
+    position: relative;
+}
+
+.card img
+{
+    margin-left: 7px;
+    margin-top: 7px;
+}
+
+.card_image
+{
+    position: static;
+}
+
+.card_image img
+{
+    position: absolute;
+}
+
+.card_image span
+{
+    font-size: 19px;
+    color: #dfdcd2;
+    margin-top: 183px;
+    margin-left: 15px;
+    position: absolute;
+}
+
+.card hr
+{
+    position: relative;
+    margin: 0 auto;
+    height: 1px;
+    width: 87%;
+    margin-top: 13px;
+    background: #e0dfdf;
+}
+
+.Card_Paragraph {
+    font-size: 15px;
+    margin-top: 13px;
+    margin-right: 15px;
+    margin-left: 15px;
+    color: #979393;
+}
+.second_section__sub_card
+{
+    position: relative;
+    display: flex;
+    float: right;
+}
+
+.second_section__sub_card img
+{
+    margin: 0;
+    margin-top: 2px;
+    margin-right: 5px;
+    height: 20px;
+}
+
+.second_section__sub_card img:last-child
+{
+    margin-right: 15px;
+}
+
+.second_section__sub_card p
+{
+    margin-top: 4px;
+    margin-right: 14px;
+    font-size: 14px;
+    color: #9f9898;
+}
+
+/* 3 Stylization footer */
+
+footer
+{
+    font-size: 17px;
+    margin-top: 62px;
+    margin-right: 13px;
+    margin-bottom: 50px;
+    color: #8b8a8a;
+    float: right;
+}
+
+
+/* 4. Optimization page */
+
+/* 4.1 Optimization for portrait orientation */
+@media (max-width:1024px) and (orientation: portrait)
+{
+    .Content__title
+    {
+        margin-left: 0px;
+        text-align: center;
+    }
+
+    .Input__File
+    {
+        margin: 0 auto;
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .Import__File
+    {
+        margin: 0 auto;
+        display: block;
+    }
+
+    .cards {
+        margin-top: 75px;
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(3, 220px);
+        grid-column-gap: 38px;
+    }
+
+    footer
+    {
+        margin-right: 30px;
+    }
+}
+
+@media (max-width: 764px) and (orientation: portrait)
+{
+    .cards {
+        margin-top: 75px;
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(2, 220px);
+        grid-column-gap: 38px;
+    }
+}
+
+@media (max-width: 732px) and (orientation: portrait)
+{
+    .header
+    {
+        display: grid;
+        justify-content: center;
+    }
+
+    .logo 
+    {
+        text-align: center;
+    }
+}
+
+@media (max-width: 510px) and (orientation: portrait)
+{
+
+    .Input__File
+    {
+        width: 80%;
+    }
+
+    .cards {
+        margin-top: 75px;
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(1, 220px);
+        grid-column-gap: 38px;
+    }
+
+    footer {
+        margin-right: 5px;
+    }
+}
+
+@media (max-width: 420px) and (orientation: portrait)
+{
+    .nav
+    {
+        display: block;
+    }
+
+    .nav_link
+    {
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid #d9d9d9;
+    }
+
+    .nav_link:last-child
+    {
+        border: none;
+    }
+}
+
+/* 4.2. Optimization for landscape orientation */
+@media (max-width: 1072px) and (orientation: landscape)
+{
+    .cards
+    {
+        grid-template-columns: repeat(3, 220px);
+        grid-column-gap: 38px;
+    }
+
+    footer 
+    {
+        margin-right: 10px;
+    }
+}
+
+@media (max-width: 777px) and (orientation: landscape)
+{
+    .Content__title
+    {
+        margin-left: 0px;
+        text-align: center;
+    }
+
+    .Input__File
+    {
+        margin: 0 auto;
+        margin-bottom: 10px;
+        display: block;
+    }
+
+    .Import__File
+    {
+        margin: 0 auto;
+        display:block;
+    }
+}
+
+@media (max-width: 759px) and (orientation: landscape)
+{
+    .cards
+    {
+        grid-template-columns: repeat(2, 220px);
+    }
+}
+
+@media (max-width: 725px) and (orientation: landscape)
+{
+    .header 
+    {
+        justify-content: center;
+        display: grid;
+    }
+    .logo
+    {
+        text-align: center;
+    }
+}
+
+@media (max-width: 495px) and (orientation: landscape)
+{
+    .cards
+    {
+        grid-template-columns: repeat(1, 220px);
+    } 
+
+    .nav
+    {
+        display: block;
+    }
+
+    .nav_link
+    {
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid #d9d9d9;
+    }
+
+    .nav_link:last-child
+    {
+        border: none;
+    }
+}
